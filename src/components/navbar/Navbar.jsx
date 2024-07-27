@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import "../custom/Navbar.css";
+import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import { FaInstagram, FaFacebook, FaEnvelope } from 'react-icons/fa';
 
@@ -16,16 +16,18 @@ function Navbar() {
 	return (
 		
 		<header>
+			<a href="/Home">
             <img src={logo} alt="logo" className="h-[3rem] w-[3.5rem]" />
+			</a>
 			<nav ref={navRef}>
 				<a href="/Home">Home</a>
 				<a href="/AboutUs">AboutUs</a>
-				<a href="/#">Academics</a>
-				<a href="/#">Admissions</a>
-                <a href="/#">Faculty</a>
-                <a href="/#">Students</a>
-                <a href="/#">Gallery</a>
-                <a href="/#">Contact Us</a>
+				<a href="/Academics">Academics</a>
+				<a href="/Admissions">Admissions</a>
+                <a href="/Faculty">Faculty</a>
+                <a href="/Students">Students</a>
+                <a href="/Gallery">Gallery</a>
+                <a href="/ContactUs">Contact Us</a>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
@@ -38,13 +40,13 @@ function Navbar() {
 				<FaBars />
 			</button>
              <div className="navbar-icons">
-          <a href="https://www.instagram.com/sipnplaynyc/" target="_blank" rel="noopener noreferrer">
+          <a href="/#" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="icon" />
           </a>
-          <a href="https://www.facebook.com/sipnplaynyc/" target="_blank" rel="noopener noreferrer">
+          <a href="/#" target="_blank" rel="noopener noreferrer">
             <FaFacebook className="icon" />
           </a>
-          <a href="mailto:sipnplaynyc@gmail.com">
+          <a href="/#">
             <FaEnvelope className="icon" />
           </a>
         </div>

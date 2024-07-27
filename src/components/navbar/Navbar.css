@@ -19,16 +19,17 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 80px;
+	height: 10vh;
 	padding: 0 2rem;
-	background-color: #F3C88E;	
+	background-color:#ffffff;	
 	color: var(--textColor);
+	/* color: white; */
 }
 
 nav a {
 	margin: 0 1.1rem;
 	font-size: 16px;
-	color: black;
+	color: #1464C7;
 	text-decoration: none;
 }
 
@@ -37,18 +38,18 @@ nav a {
   }
 
   .navbar-icons .icon {
-	color: black;
+	color: #1464C7;
 	font-size: 1.6rem;
 	margin-left: 15px;
 	display: block;
   }
   
   .navbar-icons .icon:hover {
-	color: #905b1a;
+	color: #000000;
   }
 
 nav a:hover {
-	color: #905b1a;
+	color: #000000;
 }
 
 header .nav-btn {
