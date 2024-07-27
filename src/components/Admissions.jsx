@@ -1,5 +1,5 @@
 import React from 'react';
-import school2 from '../assets/school2.jpg';
+import school2 from '../assets/school2.jpeg';
 
 function Admissions() {
   return (

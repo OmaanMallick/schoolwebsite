@@ -19,14 +19,7 @@ function Academics() {
       title: 'Commerce Stream (Grades 11-12)',
       description: 'Accountancy, Business Studies, Economics, Mathematics, English',
     },
-    {
-      title: 'Teaching Methodologies',
-      description: 'We use a blend of traditional and modern teaching techniques to cater to different learning styles.',
-    },
-    {
-      title: 'Educational Resources',
-      description: 'Digital classrooms, interactive learning modules, and access to online educational platforms.',
-    },
+   
   ];
 
   return (

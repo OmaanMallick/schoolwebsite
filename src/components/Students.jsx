@@ -1,6 +1,7 @@
 import React from 'react';
+import acad from '../assets/acad.jpg';
 
-const cards = [
+const cardData = [
   {
     title: 'Life at Springdale',
     content: "Extracurricular Activities: Music, Dance, Drama, Art, Sports, Robotics, Debate Club, Science Club\nClubs and Societies: Literary Society, Environmental Club, Astronomy Club, Coding Club",
@@ -18,28 +19,32 @@ const cards = [
   },
 ];
 
-function Card({ title, content, bgColor }) {
-  return (
-    <div className="relative w-full sm:w-72 lg:w-[25vw] h-[60vh] bg-white mx-4 my-8 rounded-2xl overflow-hidden shadow-lg transition-transform duration-500 transform hover:scale-105">
-      <div className={`absolute inset-0 ${bgColor} transition-transform duration-1000 transform hover:scale-150`} style={{ clipPath: 'circle(180px at center 0)' }}>
-        <h2 className="text-white text-2xl sm:text-3xl md:text-3xl pt-10 text-center">{title}</h2>
-      </div>
-      <div className="absolute inset-0 p-[20%] text-center flex flex-col justify-end">
-        <p className="text-gray-600 transition-colors duration-500 whitespace-pre-wrap">{content}</p>
-      </div>
-    </div>
-  );
-}
-
 function CardSection() {
   return (
-    <div className=" flex h-[90vh] w-full items-center justify-center">
-      <div className="flex flex-wrap justify-center">
-        {cards.map((card, index) => (
-          <Card key={index} {...card} />
-        ))}
-      </div>
-    </div>
+   <>
+   <section className="py-12 bg-gray-100" id="feature-section">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {cardData.map((card, index) => (
+              <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
+                <div className={`p-6 ${card.bgColor}`}>
+                  <img src={acad} alt="Package" className="w-16 h-16 mx-auto" />
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="text-2xl font-semibold mb-2">{card.title}</h3>
+                  <p className="text-gray-700 mb-4 whitespace-pre-line">
+                    {card.content}
+                  </p>
+                  <div className="learn">
+                    <a href="#" className="text-blue-500 hover:underline">Learn more</a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+   </>
   );
 }
 
